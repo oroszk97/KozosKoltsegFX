@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="338.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KepviseloLoggedTablaController">
+   <children>
+      <Label layoutX="373.0" layoutY="22.0" text="Közösképviselői panel">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="421.0" layoutY="43.0" text="Közösköltség tábla">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabla" layoutX="17.0" layoutY="78.0" prefHeight="200.0" prefWidth="506.0">
+        <columns>
+          <TableColumn fx:id="em" prefWidth="75.0" text="Emelet" />
+          <TableColumn fx:id="lak" prefWidth="119.0" text="Lakás" />
+            <TableColumn fx:id="bef" prefWidth="151.0" text="Befizetett" />
+            <TableColumn fx:id="tart" prefWidth="156.0" text="Tartozás" />
+        </columns>
+      </TableView>
+      <Button layoutX="17.0" layoutY="299.0" mnemonicParsing="false" onAction="#frissites" text="Frissítés" />
+      <Button layoutX="399.0" layoutY="299.0" mnemonicParsing="false" onAction="#vissza" text="Vissza" />
+      <Button fx:id="kilep" layoutX="471.0" layoutY="299.0" mnemonicParsing="false" onAction="#kilepes" text="Kilépés" />
+   </children>
+</AnchorPane>

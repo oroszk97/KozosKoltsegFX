@@ -1,0 +1,12 @@
+19:06:28.223 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.1.Final}
+19:06:28.225 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+19:06:28.226 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+19:06:28.344 [JavaFX Application Thread] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+19:06:28.412 [JavaFX Application Thread] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000401: using driver [oracle.jdbc.OracleDriver] at URL [jdbc:oracle:thin:@db.inf.unideb.hu:1521:ora11g]
+19:06:28.413 [JavaFX Application Thread] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=progtech, password=progtech}
+19:06:28.413 [JavaFX Application Thread] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+19:06:28.414 [JavaFX Application Thread] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+19:06:29.559 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+19:06:29.787 [JavaFX Application Thread] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+19:06:55.152 [JavaFX Application Thread] INFO  c.KepviseloLoggedLakoController - Sikeres lako kereses! Kepviselo:test
+19:07:23.992 [JavaFX Application Thread] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:oracle:thin:@db.inf.unideb.hu:1521:ora11g]

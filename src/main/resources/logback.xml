@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="false" debug="false">
+
+	<!-- Konzol -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %boldBlue(%.-1level) %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE1" class="ch.qos.logback.core.FileAppender">
+		<file>errorsandwarns.log</file>
+		<append>false</append>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE2" class="ch.qos.logback.core.FileAppender">
+		<file>info.log</file>
+		<append>false</append>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>INFO</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+  <root level="DEBUG">
+    <appender-ref ref="FILE" />
+  </root>
+
+
+	<!--
+		A gyökér logger mindent naplóz (a konzolra és az állományokba
+		is).
+	-->
+	<root level="ALL">
+		<appender-ref ref="STDOUT"/>
+		<appender-ref ref="FILE1"/>
+		<appender-ref ref="FILE2"/>
+	</root>
+
+	<!--
+		Az alábbi logger mindent a konzolra naplóz.
+
+		Az additivity="false" azt jelenti, hogy a logger-be
+		naplózott üzenetek nem adódnak tovább a hierarchiában
+		fölötte lévő logger objektumokhoz. Az attribútum értékét
+		"true"-ra kell módosítani ahhoz, hogy az üzenetek
+		eljussanak a gyökér logger-hez, így az állományokban is
+		megjelenjenek.
+	-->
+
+	<!-- <logger name="controller.MainApp" level="ALL" additivity="true">
+		<appender-ref ref="STDOUT"/>
+	</logger> -->
+
+</configuration>
