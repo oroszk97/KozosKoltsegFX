@@ -3,6 +3,7 @@
 
 Ezzel a programmal egy Társasház közösköltség táblázatát lehet kezelni JavaFX felületen keresztül. Külön panellal rendelkezik a lakó és a közösképviselő is.
 A program működéséhez egy adatbázis-ra lesz szükség 3 táblával: Kepviselok, Lakok, Tarsashaz.
+Az adatbázis adatait egy XML fájlban kell módosítani a következő helyen: ../KozosKoltsegFX/src/main/resources/META-INF/persistence.xml
 A kepviselok táblának állnia kell egy id, azonosito, jelszo, és nev táblából.
 A lakok táblának állnia kell egy id, emelet, lakas, befizetett, és telefonszam táblából.
 A tarsashaz táblának állnia kell egy id, cim, uzenet, és kozoskoltseg táblából.
