@@ -43,6 +43,12 @@
 		</license>
 	</licenses>
 	<build>
+<resources>
+<resource>
+<directory>src/main/resources/</directory>
+<filtering>true</filtering>
+</resource>
+</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -229,4 +235,13 @@
 			</plugin>
 		</plugins>
 	</reporting>
+<profiles>
+<profile>
+<id>db</id>
+<properties>
+<javax.persistence.jdbc.user>uname</javax.persistence.jdbc.user>
+<javax.persistence.jdbc.password>pw</javax.persistence.jdbc.password>
+</properties>
+</profile>
+</profiles>
 </project>

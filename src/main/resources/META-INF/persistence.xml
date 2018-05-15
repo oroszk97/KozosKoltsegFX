@@ -4,12 +4,12 @@
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <properties>
     	<!-- Az adatbázis URL-je -->
-      <property name="javax.persistence.jdbc.url" value="TODO"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@db.inf.unideb.hu:1521:ora11g"/>
        <!-- Az adatbázishoz szükséges felhasználói név  -->
-      <property name="javax.persistence.jdbc.user" value="TODO"/>
+      <property name="javax.persistence.jdbc.user" value="${javax.persistence.jdbc.user}"/>
       <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
       <!-- Az adatbázishoz szükséges jelszó-->
-      <property name="javax.persistence.jdbc.password" value="TODO"/>
+      <property name="javax.persistence.jdbc.password" value="${javax.persistence.jdbc.password}"/>
       <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
     </properties>
   </persistence-unit>
