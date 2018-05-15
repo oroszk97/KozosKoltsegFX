@@ -178,6 +178,7 @@ public class KepviseloLoggedController {
 
         } catch (IOException ex) {
             logger.error("Hiba a kepviseloi menu megnyitasa kozben: ",ex.getMessage());
+            ex.printStackTrace();
         }
     }
 

@@ -26,7 +26,7 @@ import model.Tarsashaz;
 /**
  * A bejelentkezett képviselő, képviselő menü grafikus megjelenítésére szolgáló vezérlőosztály.
  */
-public class KepviseloLoggedKepviseloController implements Initializable{
+public class KepviseloLoggedKepviseloController{
 	/**
 	 * A naplózáshoz szükséges {@code Logger}.
 	 */
@@ -264,20 +264,8 @@ public class KepviseloLoggedKepviseloController implements Initializable{
     public void initData(String azon, KozosKoltsegDAO db){
         kepviseloazon = azon;
         ud = db;
-    }
-    
-    /**
-     * Az ablak megnyitása előtt az adatbáziskapcsolat felállítása.
-     * @param url url
-     * @param rb rb
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        
         kozoskolts.setText(Integer.toString(ud.readTarsashaz(1).getKozoskoltseg()));
-        
         tcim.setText(ud.readTarsashaz(1).getCim());
-
     }
 
 
