@@ -46,6 +46,10 @@
 <resources>
 <resource>
 <directory>src/main/resources/</directory>
+<filtering>false</filtering>
+</resource>
+<resource>
+<directory>src/main/resources/META-INF/</directory>
 <filtering>true</filtering>
 </resource>
 </resources>
@@ -238,6 +242,9 @@
 <profiles>
 <profile>
 <id>db</id>
+<activation>
+        <activeByDefault>true</activeByDefault>
+    </activation>
 <properties>
 <javax.persistence.jdbc.user>uname</javax.persistence.jdbc.user>
 <javax.persistence.jdbc.password>pw</javax.persistence.jdbc.password>
